@@ -1,0 +1,29 @@
+<template>
+	<lightning-card>
+		<div class="slds-p-around_x-large">
+			<h1 class="slds-text-heading_large">KOE</h1>
+			<p>{name}</p>
+			<p>{type}</p>
+			<p>{rating}</p>
+			<p>{website}</p>
+			<p>{phone}</p>
+		</div>
+	</lightning-card>
+	<lightning-card>
+		<div class="slds-p-around_x-large">
+			<h1 class="slds-text-heading_large">Pokemons</h1>
+			<template for:each={pokemons} for:item='pokemon' for:index="index">
+				<p key={pokemon.index}>{pokemon.nome}</p>
+			</template>
+		</div>
+	</lightning-card>
+	<c-produto lapis="LAPIS SHOW" preco="10"></c-produto>
+	<c-produto lapis="LAPIS BRILHOSO" preco="20"></c-produto>
+	<c-produto lapis="LAPIS DARK" preco="50"></c-produto>
+</template>
+
+<!-- name = name
+  type = type
+  rating = rating
+  website = website
+  phone = phone -->
